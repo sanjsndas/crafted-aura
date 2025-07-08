@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Policy — CraftedAura</title>
+    <style>
+        /* General Body Styles */
+        body {
+            font-family: 'Georgia', serif; /* Elegant, classic font */
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #EFEBE9; /* Antique Cream */
+            color: #37474F; /* Charcoal Slate */
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+
+        /* Header & Navigation */
+        header {
+            background-color: #5D4037; /* Deep Walnut Brown */
+            color: #EFEBE9; /* Antique Cream */
+            padding: 1rem 0;
+        }
+
+        header .logo h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            color: #FFB74D; /* Copper Gold for accent */
+            text-align: center; /* Center the logo for simplicity */
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap; /* Allow navigation to wrap on smaller screens */
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap; /* Allow nav items to wrap */
+            justify-content: center; /* Center nav items when wrapped */
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #EFEBE9; /* Antique Cream */
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #FFB74D; /* Copper Gold */
+        }
+
+        /* Main Content Sections */
+        .section {
+            padding: 60px 0;
+            border-bottom: 1px solid #D7CCC8; /* Lighter shade of cream */
+        }
+
+        .section:last-child {
+            border-bottom: none;
+        }
+
+        .section h2 {
+            text-align: center;
+            font-size: 2.8rem;
+            margin-bottom: 40px;
+            color: #5D4037; /* Deep Walnut Brown */
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .section h2::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 0;
+            width: 80px;
+            height: 4px;
+            background-color: #FFB74D; /* Copper Gold */
+            border-radius: 2px;
+        }
+
+        .section h3 {
+            color: #5D4037;
+            font-size: 1.8rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        .section p, .section ul {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .section ul {
+            list-style: disc inside;
+            padding-left: 20px;
+        }
+
+        .section ul li {
+            margin-bottom: 10px;
+        }
+
+        /* Cookie Consent Dialogue Box */
+        #cookieConsentBox {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #37474F; /* Charcoal Slate */
+            color: #EFEBE9; /* Antique Cream */
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            display: none; /* Hidden by default */
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+        }
+
+        #cookieConsentBox p {
+            margin: 0;
+            font-size: 1rem;
+            flex-grow: 1;
+            text-align: left;
+            max-width: 70%;
+        }
+
+        #cookieConsentBox .cookie-buttons {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        #cookieConsentBox button {
+            background-color: #4CAF50; /* Forest Green */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        #cookieConsentBox button.decline {
+            background-color: #5D4037; /* Deep Walnut Brown */
+        }
+
+        #cookieConsentBox button:hover {
+            background-color: #379636; /* Darker green */
+        }
+
+        #cookieConsentBox button.decline:hover {
+            background-color: #4A332B; /* Darker brown */
+        }
+
+        /* Footer */
+        footer {
+            background-color: #37474F; /* Charcoal Slate */
+            color: #EFEBE9; /* Antique Cream */
+            padding: 40px 0;
+            font-size: 0.9rem;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .footer-section {
+            flex: 1;
+            min-width: 250px;
+            margin-bottom: 20px;
+        }
+
+        .footer-section h3 {
+            color: #FFB74D; /* Copper Gold */
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 8px;
+        }
+
+        .footer-section ul li a {
+            color: #EFEBE9; /* Antique Cream */
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section ul li a:hover {
+            color: #4CAF50; /* Forest Green */
+        }
+
+        .footer-section.social a {
+            display: inline-block;
+            color: #EFEBE9;
+            background-color: #5D4037; /* Deep Walnut Brown */
+            padding: 8px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-right: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .footer-section.social a:hover {
+            background-color: #4CAF50; /* Forest Green */
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(239, 235, 233, 0.2); /* Lighter border */
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+            }
+
+            nav ul {
+                margin-top: 20px;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .footer-section {
+                text-align: center;
+            }
+
+            #cookieConsentBox p {
+                max-width: 100%;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .section h2 {
+                font-size: 2rem;
+            }
+            #cookieConsentBox {
+                flex-direction: column;
+                gap: 10px;
+            }
+            #cookieConsentBox .cookie-buttons {
+                width: 100%;
+                justify-content: space-around;
+            }
+            #cookieConsentBox button {
+                width: 45%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <h1>CraftedAura</h1>
+                </div>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                    <li><a href="terms.html">Terms</a></li>
+                    <li><a href="cookies.html">Cookies</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="cookie-policy" class="section">
+            <h2>Cookie Policy</h2>
+            <p><strong>Last Updated: July 5, 2025</strong></p>
+
+            <p>
+                This Cookie Policy explains what cookies are, how CraftedAura ("we," "us," or "our") uses cookies and similar technologies on our website, and your choices regarding cookies. We encourage you to read this policy in full so that you can understand what information we collect using cookies and how that information is used.
+            </p>
+            <p>
+                By continuing to browse and use our website, you are agreeing to our use of cookies in accordance with this policy. If you do not agree, you should adjust your browser settings or refrain from using our website.
+            </p>
+
+            <h3>What are Cookies?</h3>
+            <p>
+                Cookies are small text files that are placed on your computer or mobile device when you visit a website. They are widely used by website owners in order to make their websites work, or to work more efficiently, as well as to provide reporting information. Cookies can be "persistent" or "session" cookies. Persistent cookies remain on your personal computer or mobile device when you go offline, while session cookies are deleted as soon as you close your web browser.
+            </p>
+
+            <h3>How We Use Cookies</h3>
+            <p>
+                We use cookies for various purposes, including to ensure the proper functioning of our website, to analyze website traffic, to personalize content, and to deliver targeted advertisements. The specific types of cookies served through our website and the purposes they perform are described below.
+            </p>
+
+            <h3>Your Cookie Choices</h3>
+            <p>
+                You have the right to decide whether to accept or reject cookies. You can exercise your cookie preferences by clicking on the appropriate buttons in the cookie consent dialogue box at the bottom of the page. You can also set or amend your web browser controls to accept or refuse cookies. If you choose to reject cookies, you may still use our website, though your access to some functionality and areas of our website may be restricted.
+            </p>
+
+            <h3>Detailed Cookie Explanations (40 Points)</h3>
+
+            <!-- Point 1 -->
+            <h3>1. Strictly Necessary Cookies</h3>
+            <p>
+                These cookies are essential for the website to function properly and cannot be switched off in our systems. They are usually only set in response to actions made by you which amount to a request for services, such as setting your privacy preferences, logging in, or filling in forms. Without these cookies, services like shopping carts or e-billing cannot be provided. They do not store any personally identifiable information. Your consent is not typically required for these cookies as they are fundamental to the website's operation. Blocking these cookies may render certain parts of the site unusable.
+                <br><br>
+                For instance, when you add items to your shopping cart on CraftedAura, a strictly necessary cookie remembers what you've added as you navigate through different pages. If this cookie were disabled, your cart would empty every time you moved to a new product page, making online shopping impossible. Similarly, login session cookies ensure you remain logged in as you browse, preventing you from having to re-enter your credentials on every page. These cookies are crucial for maintaining the state of your interaction with the website and ensuring a functional user experience. They are typically first-party cookies, meaning they are set by CraftedAura directly.
+            </p>
+
+            <!-- Point 2 -->
+            <h3>2. Performance or Analytical Cookies</h3>
+            <p>
+                These cookies collect information about how visitors use a website, for instance, which pages visitors go to most often, and if they get error messages from web pages. These cookies don't collect information that identifies a visitor. All information these cookies collect is aggregated and therefore anonymous. It is only used to improve how a website works. We use these cookies to understand and analyze usage patterns, which helps us to enhance the website's performance and design.
+                <br><br>
+                For example, CraftedAura uses analytical cookies to track which of our product pages are most popular, how long visitors spend on our workshop booking page, or if users encounter broken links. This data is anonymized and helps us identify areas for improvement, such as optimizing navigation, refining content, or fixing technical issues. By understanding user behavior in aggregate, we can make informed decisions to improve the overall user experience and ensure our website is efficient and intuitive. These insights are vital for continuous improvement without compromising individual privacy.
+            </p>
+
+            <!-- Point 3 -->
+            <h3>3. Functionality Cookies</h3>
+            <p>
+                Functionality cookies allow the website to remember choices you make (such as your user name, language, or the region you are in) and provide enhanced, more personal features. For instance, a website may be able to provide you with local weather reports or traffic news by storing in a cookie the region in which you are currently located. These cookies can also be used to remember changes you have made to text size, fonts, and other parts of web pages that you can customize. They may also be used to provide services you have asked for such as watching a video or commenting on a blog. The information these cookies collect may be anonymized and they cannot track your browsing activity on other websites.
+                <br><br>
+                On CraftedAura, functionality cookies might remember your preferred language if we offer multiple language options, or recall items you've recently viewed to provide personalized recommendations. If you customize display settings, such as font size for easier reading, a functionality cookie could store this preference for your next visit. These cookies aim to make your experience more convenient and tailored to your individual preferences, enhancing usability without being intrusive. They improve your interaction with the site by remembering your choices and settings, leading to a more efficient and enjoyable browsing session.
+            </p>
+
+            <!-- Point 4 -->
+            <h3>4. Targeting or Advertising Cookies</h3>
+            <p>
+                These cookies are used to deliver advertisements more relevant to you and your interests. They are also used to limit the number of times you see an advertisement as well as help measure the effectiveness of the advertising campaigns. They are usually placed by advertising networks with the website operator’s permission. They remember that you have visited a website and this information is shared with other organizations such as advertisers. Quite often, targeting or advertising cookies will be linked to site functionality provided by the other organization.
+                <br><br>
+                For example, after browsing CraftedAura's wood carving tools, you might see advertisements for similar tools on other websites you visit. This is facilitated by targeting cookies. These cookies help us understand which of our products or services might be of interest to you, allowing us to display more relevant ads on third-party platforms. They are crucial for our marketing efforts, helping us reach potential customers more effectively and efficiently, while also ensuring you don't see the same ad repeatedly. They help tailor the advertising experience to your inferred interests, making ads more useful to you.
+            </p>
+
+            <!-- Point 5 -->
+            <h3>5. First-Party Cookies</h3>
+            <p>
+                First-party cookies are cookies set by the website you are visiting (i.e., the domain shown in the URL bar). They are generally used to remember your preferences, such as login details, language settings, or shopping cart contents, making your browsing experience more efficient and personalized. Since they are set by the website directly, they are often considered less intrusive than third-party cookies. They are essential for core website functionalities and for providing services directly requested by the user.
+                <br><br>
+                On CraftedAura, our first-party cookies ensure that when you add a custom wood sculpture to your cart, it remains there as you continue browsing other sections of our site. They also remember if you've already accepted our cookie policy, preventing the banner from reappearing on every visit. These cookies are fundamental to maintaining your session and preferences directly on our site, enhancing usability and providing a seamless experience without relying on external domains. They are a cornerstone of a functional and user-friendly website.
+            </p>
+
+            <!-- Point 6 -->
+            <h3>6. Third-Party Cookies</h3>
+            <p>
+                Third-party cookies are cookies set by a domain other than the one you are visiting. This typically occurs when the website you are visiting integrates content from third-party providers, such as social media feeds, embedded videos, or advertising networks. These cookies are often used for cross-site tracking, analytics, and targeted advertising, allowing third parties to build a profile of your browsing habits across different websites.
+                <br><br>
+                For instance, if CraftedAura embeds a YouTube video on our "Our Story" page, YouTube might set a third-party cookie on your browser. Similarly, if we use a third-party analytics service like Google Analytics, it will set cookies to collect data on our behalf. Advertising partners also frequently use third-party cookies to track your interests and show you relevant ads on other sites. These cookies enable enhanced functionalities and services but also raise more privacy concerns due to their cross-site tracking capabilities, hence the need for explicit consent in many regions.
+            </p>
+
+            <!-- Point 7 -->
+            <h3>7. Session Cookies</h3>
+            <p>
+                Session cookies are temporary cookies that remain in your browser's cookie file only until you close your browser. They are used to track your activity during a single browsing session, for example, remembering items in a shopping cart or user login status. Once the browser is closed, the session cookie is deleted. They are crucial for the basic functionality of many websites and are generally considered less privacy-invasive than persistent cookies because they do not store information long-term.
+                <br><br>
+                When you log into your CraftedAura account to check your order history, a session cookie keeps you authenticated as you navigate through different pages within that session. If you were to close your browser and reopen it, you would typically need to log in again because the session cookie has been removed. These cookies ensure that your actions within a single visit are remembered, providing continuity and efficiency without leaving a lasting trace on your device after you've finished browsing.
+            </p>
+
+            <!-- Point 8 -->
+            <h3>8. Persistent Cookies</h3>
+            <p>
+                Persistent cookies, also known as "tracking cookies," remain on your device for a set period (which can range from a few minutes to several years) or until you manually delete them. They are used to remember your preferences or actions across multiple browsing sessions. This allows websites to recall your settings, login information, or even personalized content when you return. They are often used for analytics, remembering user preferences, and targeted advertising.
+                <br><br>
+                CraftedAura might use a persistent cookie to remember your preferred language setting or to keep you logged in to your account for a certain duration, even after you close and reopen your browser. These cookies enhance convenience by eliminating the need to re-enter information or re-select preferences on subsequent visits. They are also commonly used by analytics services to track returning visitors and understand long-term user behavior patterns, which helps in optimizing website content and marketing strategies over time.
+            </p>
+
+            <!-- Point 9 -->
+            <h3>9. Flash Cookies (Local Shared Objects)</h3>
+            <p>
+                Flash cookies, or Local Shared Objects (LSOs), are data files that can be created by websites that use Adobe Flash Player. They are similar to regular browser cookies but can store more data and are managed differently by your browser. Flash cookies can be used to track user activity across websites and can persist even after regular HTTP cookies are deleted, making them a more persistent form of tracking. Due to privacy concerns and the decline of Flash technology, their use has significantly decreased.
+                <br><br>
+                Historically, CraftedAura might have used Flash cookies for interactive elements like embedded video players or rich animations. These cookies could remember your video playback preferences or game scores. However, with the deprecation of Adobe Flash Player, their relevance has diminished. While less common now, understanding Flash cookies is important as they represented a more persistent tracking mechanism that bypassed standard browser cookie controls, posing unique challenges for user privacy and data management.
+            </p>
+
+            <!-- Point 10 -->
+            <h3>10. Zombie Cookies</h3>
+            <p>
+                Zombie cookies are a type of persistent cookie that can automatically recreate themselves after being deleted. This is typically achieved by storing the cookie information in multiple locations on a user's computer, such as Flash Local Shared Objects, HTML5 Web Storage, or even in browser history. When a user deletes one instance of the cookie, the other instances can regenerate it, making them particularly difficult to remove and raising significant privacy concerns due to their highly persistent nature.
+                <br><br>
+                While CraftedAura does not employ zombie cookies, their existence highlights advanced tracking techniques. A website using a zombie cookie might, for instance, store a unique identifier in both a regular HTTP cookie and a Flash cookie. If the user deletes the HTTP cookie, the Flash cookie could then recreate it. This resilience makes them a powerful tool for persistent tracking, often used by advertisers to ensure their tracking mechanisms remain intact even after users attempt to clear their browsing data.
+            </p>
+
+            <!-- Point 11 -->
+            <h3>11. Supercookies</h3>
+            <p>
+                Supercookies are tracking mechanisms that are more difficult to detect and remove than traditional HTTP cookies. They are not stored in the browser's conventional cookie storage but can be implemented at the network level by Internet Service Providers (ISPs) or mobile carriers, or by storing identifiers in other browser data stores like HTTP Strict Transport Security (HSTS) settings or ETag headers. Because they operate outside standard browser controls, users have limited ability to manage or delete them, leading to significant privacy implications.
+                <br><br>
+                CraftedAura does not use supercookies. However, understanding them is important for comprehensive privacy awareness. An ISP might insert a unique identifier into all unencrypted web traffic, allowing them to track a user's browsing across all websites. This type of tracking is highly persistent and difficult for users to opt out of, as it operates at a layer below the web browser. Supercookies represent a more aggressive form of user tracking, often raising regulatory and ethical concerns due to their pervasive nature.
+            </p>
+
+            <!-- Point 12 -->
+            <h3>12. HTTP Cookies</h3>
+            <p>
+                HTTP cookies are the most common type of web cookie. They are small pieces of data sent from a website and stored on the user's computer by the user's web browser while the user is browsing. They are designed to be a reliable mechanism for websites to remember stateful information (such as items added in the shopping cart in an online store) or to record the user's browsing activity (including clicking particular buttons, logging in, or recording which pages were visited in the past). They can also be used to remember arbitrary pieces of information that the user previously entered into form fields such as names, addresses, passwords, and credit card numbers.
+                <br><br>
+                When you visit CraftedAura, the server sends an HTTP cookie to your browser. This cookie might contain a session ID that allows our server to recognize your specific browsing session, or it might store your preference for viewing products in a grid or list layout. Each time your browser makes a request to our server, it sends this HTTP cookie back, allowing the server to "remember" your previous interactions and preferences. This fundamental mechanism underpins much of the personalized and functional experience on the web.
+            </p>
+
+            <!-- Point 13 -->
+            <h3>13. Secure Cookies</h3>
+            <p>
+                A secure cookie is a cookie that can only be transmitted over an encrypted HTTPS connection. This means that the cookie's data is protected from interception by unauthorized parties during transmission. If a website attempts to set a secure cookie over an unencrypted HTTP connection, the cookie will not be set. This security flag helps prevent man-in-the-middle attacks where attackers might try to intercept sensitive cookie information.
+                <br><br>
+                CraftedAura ensures that all sensitive information, such as login credentials or payment details, is handled over HTTPS. When you log into your account, the session cookie set for your authentication will be a secure cookie. This ensures that your login token, which identifies you to our server, cannot be easily intercepted by malicious actors on an unsecure network. The "Secure" attribute is a critical security measure for protecting user data transmitted via cookies.
+            </p>
+
+            <!-- Point 14 -->
+            <h3>14. HttpOnly Cookies</h3>
+            <p>
+                An HttpOnly cookie is a cookie that cannot be accessed by client-side scripts (e.g., JavaScript). This security feature helps mitigate the risk of cross-site scripting (XSS) attacks. In an XSS attack, malicious scripts injected into a website could potentially steal cookies containing sensitive information (like session IDs). By marking a cookie as HttpOnly, even if an XSS vulnerability exists, the script cannot read the cookie's value, thus protecting the user's session.
+                <br><br>
+                For instance, CraftedAura sets authentication cookies with the HttpOnly flag. This means that while your browser sends this cookie to our server with every request to keep you logged in, no JavaScript code running on our website (or any injected malicious script) can directly read or manipulate the value of that cookie. This significantly reduces the risk of session hijacking, where an attacker could steal your session cookie and impersonate you on the website.
+            </p>
+
+            <!-- Point 15 -->
+            <h3>15. SameSite Attribute (Lax, Strict, None)</h3>
+            <p>
+                The SameSite attribute on a cookie controls whether the cookie is sent with cross-site requests. It helps prevent Cross-Site Request Forgery (CSRF) attacks and enhances user privacy. There are three possible values:
+                <ul>
+                    <li><strong>Lax:</strong> Cookies are sent with top-level navigations (e.g., clicking a link) and GET requests, but not with cross-site requests initiated by other means (e.g., images, iframes, XHR). This is the default in modern browsers.</li>
+                    <li><strong>Strict:</strong> Cookies are only sent with same-site requests. They are never sent with cross-site requests, even when following a link.</li>
+                    <li><strong>None:</strong> Cookies are sent with all requests, including cross-site requests. This requires the `Secure` attribute to be set (i.e., HTTPS).</li>
+                </ul>
+                <br>
+                CraftedAura utilizes the SameSite attribute to enhance the security and privacy of your browsing experience. For most of our cookies, we use the `Lax` setting, which provides a good balance between security and functionality. This means that while our cookies are generally not sent with third-party requests, they will be sent when you navigate directly to our site from an external link. For cookies that explicitly need to be sent across sites (e.g., for embedded social media widgets, if any), we ensure the `SameSite=None; Secure` attributes are correctly applied, ensuring compatibility while maintaining security over HTTPS. This helps protect against malicious cross-site requests and improves overall data integrity.
+            </p>
+
+            <!-- Point 16 -->
+            <h3>16. Cookie Consent (GDPR, CCPA)</h3>
+            <p>
+                Cookie consent refers to the legal requirement for websites to obtain explicit permission from users before placing certain types of cookies on their devices. This is mandated by privacy regulations like the General Data Protection Regulation (GDPR) in Europe and the California Consumer Privacy Act (CCPA) in the United States. These regulations aim to give users more control over their personal data and how it's tracked online. Websites typically implement cookie banners or pop-ups to solicit this consent, allowing users to accept, decline, or customize their cookie preferences.
+                <br><br>
+                CraftedAura adheres to these global privacy standards. When you first visit our website, you will see a cookie consent dialogue box at the bottom of the page. This mechanism ensures that we only place non-essential cookies (like analytical or advertising cookies) on your device after you have given us your explicit permission. We provide clear information about the types of cookies we use and their purposes, enabling you to make an informed decision about your privacy. This commitment to transparent cookie consent is central to our respect for your data privacy rights.
+            </p>
+
+            <!-- Point 17 -->
+            <h3>17. How to Manage Cookies in Chrome</h3>
+            <p>
+                Google Chrome provides robust settings for managing cookies. To access these settings, open Chrome, click the three-dot menu in the top-right corner, go to "Settings," then "Privacy and security," and finally "Site Settings." Under "Content," you'll find "Cookies and site data." Here, you can choose to allow all cookies, block all cookies (not recommended as it breaks many sites), block third-party cookies in Incognito, or block third-party cookies. You can also see all cookies and site data, delete specific cookies, or add sites to an allow/block list.
+                <br><br>
+                For example, if you want to ensure CraftedAura functions perfectly while limiting tracking from other sites, you might choose to "Block third-party cookies." If you're having trouble with a specific website, you can find and delete its cookies from the "See all cookies and site data" section. Chrome's settings offer granular control, empowering you to tailor your cookie preferences to your comfort level, balancing privacy with website functionality. Regularly reviewing these settings can help maintain your desired level of online privacy.
+            </p>
+
+            <!-- Point 18 -->
+            <h3>18. How to Manage Cookies in Firefox</h3>
+            <p>
+                Mozilla Firefox offers strong privacy controls, including enhanced tracking protection. To manage cookies in Firefox, click the three-line menu in the top-right, select "Settings," then "Privacy & Security." Under "Enhanced Tracking Protection," you can choose between Standard, Strict, or Custom modes. The Custom mode allows you to specifically block cookies from unvisited websites, all third-party cookies, or all cookies. You can also manage data for individual websites by clicking "Manage Data..." under the "Cookies and Site Data" section.
+                <br><br>
+                If you opt for Firefox's "Strict" mode, it will proactively block many third-party trackers and cookies, providing a higher level of privacy. For CraftedAura, this might mean that some embedded content from third parties (like social media share buttons) might not function fully unless you adjust your settings for our site specifically. Firefox's comprehensive approach allows users to easily configure their browser to match their privacy preferences, giving them significant control over how cookies are handled and what data is collected by websites.
+            </p>
+
+            <!-- Point 19 -->
+            <h3>19. How to Manage Cookies in Edge</h3>
+            <p>
+                Microsoft Edge, based on Chromium, provides similar cookie management options to Chrome. To adjust cookie settings, click the three-dot menu in the top-right, go to "Settings," then "Privacy, search, and services." Under the "Tracking prevention" section, you can choose between Basic, Balanced, or Strict tracking prevention. Below that, in the "Clear browsing data now" section, you can select "Choose what to clear" and specifically delete cookies and other site data. Under "Cookies and site permissions," you can manage individual site permissions and see all cookies and site data.
+                <br><br>
+                For users of CraftedAura, Edge's "Balanced" tracking prevention is usually sufficient to allow our website to function properly while still offering a good level of privacy. If you want to ensure maximum privacy, the "Strict" setting will block most trackers and third-party cookies, though it might impact the functionality of some websites. Edge's clear interface makes it straightforward for users to control their cookie settings and manage their online privacy preferences effectively.
+            </p>
+
+            <!-- Point 20 -->
+            <h3>20. How to Manage Cookies in Safari</h3>
+            <p>
+                Apple's Safari browser emphasizes privacy, with Intelligent Tracking Prevention (ITP) as a core feature. To manage cookies in Safari on macOS, go to "Safari" > "Preferences," then click "Privacy." Here, you can check "Prevent cross-site tracking" to block third-party cookies and data used for tracking. You can also click "Manage Website Data..." to see which websites have stored data (including cookies) and remove specific ones. On iOS, go to "Settings" > "Safari" > "Privacy & Security" to find similar options.
+                <br><br>
+                Safari's ITP is designed to limit cross-site tracking by default, which means CraftedAura's third-party advertising or analytics cookies might be restricted without explicit action from the user. This is generally beneficial for user privacy as it reduces the ability of third parties to build comprehensive profiles of your browsing habits across different sites. Safari's approach offers a strong privacy baseline, requiring less manual configuration from the user to achieve a good level of protection against tracking.
+            </p>
+
+            <!-- Point 21 -->
+            <h3>21. Browser Settings for Cookies</h3>
+            <p>
+                Beyond specific browser instructions, most web browsers offer a general set of controls for managing cookies. These typically include options to:
+                <ul>
+                    <li>Accept all cookies.</li>
+                    <li>Block all cookies.</li>
+                    <li>Block third-party cookies only.</li>
+                    <li>Delete cookies when the browser is closed.</li>
+                    <li>Prompt you before accepting a cookie.</li>
+                    <li>View and delete individual cookies.</li>
+                </ul>
+                <br>
+                These settings are usually found in the "Privacy" or "Security" section of your browser's preferences or settings menu. It's important to understand that blocking all cookies can significantly impair your ability to use many websites, as essential functionalities often rely on cookies. CraftedAura recommends a balanced approach, such as blocking third-party cookies while allowing first-party cookies, to maintain a good user experience while enhancing privacy.
+            </p>
+
+            <!-- Point 22 -->
+            <h3>22. Deleting Cookies</h3>
+            <p>
+                Deleting cookies removes the data stored by websites on your browser. This can be useful for privacy reasons, as it clears tracking data and personal preferences that websites might have stored. However, deleting cookies will also log you out of websites, clear shopping carts, and reset any personalized settings, requiring you to re-enter information on subsequent visits. Most browsers allow you to delete all cookies or select specific ones to remove.
+                <br><br>
+                If you delete cookies from your browser, the next time you visit CraftedAura, you might see the cookie consent banner again, and any items previously in your shopping cart (if not saved server-side) might be gone. While deleting cookies provides a fresh start and enhances privacy, it's a trade-off with convenience. Users often choose to delete cookies periodically rather than after every session, or use browser extensions that automate the process for specific types of cookies.
+            </p>
+
+            <!-- Point 23 -->
+            <h3>23. Blocking Cookies</h3>
+            <p>
+                Blocking cookies prevents websites from placing new cookies on your device. This can be done through your browser settings, allowing you to block all cookies, only third-party cookies, or cookies from specific websites. While blocking all cookies offers maximum privacy, it can severely impact website functionality, as many sites rely on cookies for basic operations like logging in or remembering preferences. Blocking third-party cookies is a common compromise that enhances privacy without breaking most websites.
+                <br><br>
+                If you configure your browser to block all cookies, CraftedAura's website might not function as intended. You might not be able to log into your account, add items to your cart, or use certain interactive features. Blocking third-party cookies, however, will primarily affect how third-party services (like advertising networks) track you across different sites, while allowing our core website functionalities to remain intact. It's a key tool for managing your online footprint.
+            </p>
+
+            <!-- Point 24 -->
+            <h3>24. Incognito/Private Browsing</h3>
+            <p>
+                Incognito mode (Chrome) or Private Browsing (Firefox, Safari, Edge) allows you to browse the internet without saving your browsing history, cookies, site data, or information entered in forms. When you close an incognito window, all cookies and site data from that session are deleted. This mode is useful for temporary browsing sessions where you don't want your activity to be recorded on your device, but it does not make you anonymous online to websites or your internet service provider.
+                <br><br>
+                If you visit CraftedAura in Incognito mode, any cookies we set during that session will be automatically deleted once you close the window. This means that if you log in, you'll be logged out when you close the window, and any items in your cart will be cleared. It's a convenient way to browse without leaving a local trace, especially on shared computers, but it's important to remember that websites can still identify you through other means (like your IP address) during the active session.
+            </p>
+
+            <!-- Point 25 -->
+            <h3>25. Cookie Walls</h3>
+            <p>
+                A cookie wall (or cookie paywall) is a controversial practice where a website prevents users from accessing its content unless they accept all cookies, including those for advertising and tracking. This practice has been deemed non-compliant with GDPR by some data protection authorities, as it does not offer a genuine choice to the user. The idea is that consent must be freely given, specific, informed, and unambiguous, which a cookie wall often undermines.
+                <br><br>
+                CraftedAura does not employ cookie walls. We believe in providing a genuine choice regarding your cookie preferences. Our cookie consent dialogue allows you to accept or decline non-essential cookies while still being able to access our website content. We prioritize user choice and transparency over forcing consent, aligning with best practices for data privacy and user experience. The debate around cookie walls highlights the tension between website monetization and user privacy rights.
+            </p>
+
+            <!-- Point 26 -->
+            <h3>26. Cookie Banners</h3>
+            <p>
+                A cookie banner is a pop-up or bar displayed on a website to inform users about the site's use of cookies and to obtain their consent, as required by privacy regulations. Effective cookie banners provide clear information about the types of cookies used, their purposes, and offer options to accept all, decline all (non-essential), or customize preferences. They are a common interface for implementing cookie consent mechanisms.
+                <br><br>
+                When you first land on CraftedAura's website, you will see a cookie banner at the bottom of your screen. This banner serves as our primary method for informing you about our cookie usage and for gathering your consent. It provides a brief overview and clear buttons to either accept or manage your preferences, ensuring that our cookie practices are transparent and compliant with privacy laws, empowering you to control your data.
+            </p>
+
+            <!-- Point 27 -->
+            <h3>27. Impact on Privacy</h3>
+            <p>
+                Cookies, particularly third-party and persistent cookies, can have a significant impact on user privacy. They enable websites and advertising networks to track your browsing habits across multiple sites, build detailed profiles of your interests, and deliver highly targeted advertisements. This extensive data collection can feel intrusive and lead to concerns about personal data being used without explicit knowledge or control. Regulations like GDPR and CCPA aim to mitigate these privacy risks by requiring consent and transparency.
+                <br><br>
+                At CraftedAura, we are committed to minimizing the impact on your privacy. While we use necessary and analytical cookies to improve our site, we strive to be transparent about any third-party cookies used for marketing purposes and ensure we obtain your consent where required. We believe in respecting your privacy and providing you with the tools to manage your data, ensuring that your online experience with us is both enjoyable and secure, without compromising your personal information.
+            </p>
+
+            <!-- Point 28 -->
+            <h3>28. Impact on User Experience</h3>
+            <p>
+                Cookies can significantly enhance the user experience by remembering preferences, keeping users logged in, and providing personalized content. Without cookies, websites would be far less convenient, requiring users to re-enter information, re-select settings, and re-authenticate frequently. However, excessive or intrusive use of cookies, especially those for aggressive tracking or advertising, can negatively impact user experience by causing slow loading times, irrelevant ads, or a feeling of being constantly monitored.
+                <br><br>
+                CraftedAura leverages cookies to improve your experience. For instance, our cookies remember your shopping cart items, saving you time and effort. They also help us understand which parts of our site are most engaging, allowing us to optimize content and navigation for a smoother journey. We aim for a balance where cookies enhance functionality and personalization without becoming a burden, ensuring that your interaction with CraftedAura is efficient, enjoyable, and tailored to your needs.
+            </p>
+
+            <!-- Point 29 -->
+            <h3>29. Cookie Expiration</h3>
+            <p>
+                Cookies have an expiration date or duration after which they are automatically deleted from your browser. Session cookies expire when the browser is closed. Persistent cookies have a specified expiration date set by the website, which can range from a few minutes to several years. Websites set expiration dates based on the cookie's purpose; for example, a login cookie might expire after a few days for convenience, while an analytics cookie might persist for a year to track long-term trends.
+                <br><br>
+                CraftedAura sets appropriate expiration dates for its cookies. For instance, our session cookies expire when you close your browser, ensuring temporary data is cleared. Our analytical cookies might have a longer lifespan (e.g., 13 months, as per some GDPR guidelines) to help us understand returning visitor patterns. We regularly review our cookie expiration policies to ensure they align with best practices for both functionality and user privacy, preventing unnecessary long-term data retention on your device.
+            </p>
+
+            <!-- Point 30 -->
+            <h3>30. Cookie Domain</h3>
+            <p>
+                The cookie domain specifies which websites are allowed to read a cookie. A cookie can only be read by the domain that set it or by any subdomain of that domain. For example, a cookie set by `example.com` can be read by `www.example.com` or `shop.example.com`. This security feature prevents websites from accessing cookies set by other, unrelated websites, thereby protecting user data from unauthorized access.
+                <br><br>
+                All first-party cookies set by CraftedAura will have their domain set to `craftedaura.com` (or the specific subdomain if applicable). This ensures that only our website can access these cookies, preventing other websites from reading your session information or preferences stored by us. For third-party cookies (e.g., from an analytics provider), their domain will correspond to the third-party service, indicating which external entity is responsible for that cookie.
+            </p>
+
+            <!-- Point 31 -->
+            <h3>31. Cookie Path</h3>
+            <p>
+                The cookie path specifies the URL path within a domain for which the cookie is valid. If a cookie is set with a path, it will only be sent to the server when the user navigates to a URL that matches that path or its subdirectories. For example, a cookie set with a path of `/shop/` will only be sent when accessing `craftedaura.com/shop/` or `craftedaura.com/shop/products/`. If no path is specified, it defaults to the path of the page that set the cookie.
+                <br><br>
+                CraftedAura uses cookie paths to ensure that cookies are only sent when necessary. For instance, a cookie related to our workshop booking system might be set with a path of `/workshops/`. This means that this specific cookie will only be transmitted when you are interacting with pages within our workshop section, optimizing network traffic and ensuring that cookies are only used where relevant to the specific functionality.
+            </p>
+
+            <!-- Point 32 -->
+            <h3>32. Cookie Flags</h3>
+            <p>
+                Cookie flags are attributes added to cookies that control their behavior and security. Key flags include:
+                <ul>
+                    <li>`Secure`: Ensures the cookie is only sent over HTTPS.</li>
+                    <li>`HttpOnly`: Prevents client-side scripts (JavaScript) from accessing the cookie.</li>
+                    <li>`SameSite`: Controls whether the cookie is sent with cross-site requests (Lax, Strict, None).</li>
+                    <li>`Expires`/`Max-Age`: Sets the cookie's expiration date/time.</li>
+                </ul>
+                <br>
+                These flags are crucial for enhancing the security and privacy of cookies. CraftedAura meticulously applies these flags to its cookies to protect your data. For example, our authentication cookies are marked `Secure` and `HttpOnly` to prevent interception and script access, while `SameSite` attributes are used to mitigate CSRF risks. Understanding these flags helps ensure that cookies are handled responsibly and securely.
+            </p>
+
+            <!-- Point 33 -->
+            <h3>33. Cookie Security Risks</h3>
+            <p>
+                While cookies are essential for web functionality, they also pose several security risks if not properly managed. These include:
+                <ul>
+                    <li><strong>Session Hijacking:</strong> If an attacker steals a session cookie, they can impersonate the user.</li>
+                    <li><strong>Cross-Site Scripting (XSS):</strong> Malicious scripts can steal cookies if they are not HttpOnly.</li>
+                    <li><strong>Cross-Site Request Forgery (CSRF):</strong> Attackers can trick users into performing actions on a website using their authenticated cookies.</li>
+                    <li><strong>Cookie Poisoning:</strong> Modifying the content of a cookie to exploit vulnerabilities.</li>
+                    <li><strong>Privacy Concerns:</strong> Extensive tracking by third-party cookies.</li>
+                </ul>
+                <br>
+                CraftedAura implements various security measures, including using `Secure`, `HttpOnly`, and `SameSite` flags, to mitigate these risks. We regularly update our security protocols to protect your information from potential threats associated with cookies.
+            </p>
+
+            <!-- Point 34 -->
+            <h3>34. Cookie Benefits for Users</h3>
+            <p>
+                For users, cookies offer significant benefits that enhance the browsing experience. They enable convenience features such as:
+                <ul>
+                    <li>Staying logged into websites.</li>
+                    <li>Remembering shopping cart contents across pages.</li>
+                    <li>Personalizing content based on past interactions.</li>
+                    <li>Recalling language preferences or display settings.</li>
+                    <li>Faster loading times for frequently visited sites (due to cached data).</li>
+                </ul>
+                <br>
+                Without cookies, many modern web functionalities would be cumbersome or impossible. CraftedAura uses cookies to make your visit smoother and more tailored, ensuring that your preferences are remembered and that you don't have to repeatedly provide the same information, ultimately leading to a more efficient and enjoyable online experience with our brand.
+            </p>
+
+            <!-- Point 35 -->
+            <h3>35. Cookie Benefits for Websites</h3>
+            <p>
+                For website operators like CraftedAura, cookies are indispensable tools that provide numerous benefits:
+                <ul>
+                    <li><strong>Session Management:</strong> Maintaining user login status and shopping cart contents.</li>
+                    <li><strong>Personalization:</strong> Delivering tailored content and recommendations.</li>
+                    <li><strong>Analytics:</strong> Understanding user behavior, traffic sources, and website performance.</li>
+                    <li><strong>Marketing & Advertising:</strong> Targeting ads effectively and measuring campaign success.</li>
+                    <li><strong>A/B Testing:</strong> Testing different website versions to optimize user experience.</li>
+                    <li><strong>Security:</strong> Identifying and preventing fraudulent activities.</li>
+                </ul>
+                <br>
+                These benefits allow CraftedAura to continually improve our website, offer relevant products and services, understand our audience better, and ensure a secure and efficient platform for our customers.
+            </p>
+
+            <!-- Point 36 -->
+            <h3>36. Role in Personalization</h3>
+            <p>
+                Cookies play a pivotal role in personalizing your online experience. By remembering your past interactions, preferences, and browsing history, websites can tailor content, product recommendations, and services specifically for you. This creates a more relevant and engaging experience, making it easier for you to find what you're looking for and discover new items of interest.
+                <br><br>
+                CraftedAura uses cookies to personalize your journey. For example, if you frequently view our "wood carving tools" section, cookies can help us recommend new tools or related workshops. If you've previously bought a specific type of honey, we might suggest complementary products. This personalization aims to enhance your satisfaction by presenting content that genuinely resonates with your interests, making your experience with us more efficient and enjoyable.
+            </p>
+
+            <!-- Point 37 -->
+            <h3>37. Role in Analytics</h3>
+            <p>
+                Analytical cookies are fundamental for website owners to understand how their site is being used. They collect anonymous data on user behavior, such as pages visited, time spent on site, bounce rates, and traffic sources. This aggregated data provides valuable insights into website performance, popular content, user flow, and areas needing improvement.
+                <br><br>
+                CraftedAura relies on analytical cookies to gain insights into our website's performance. This data helps us understand which handcrafted creations are most popular, how users navigate our workshop pages, and where visitors might encounter difficulties. By analyzing these trends, we can optimize our website's layout, content, and functionality, ensuring a smoother and more effective experience for all our visitors. This continuous improvement is driven by the anonymous insights provided by analytical cookies.
+            </p>
+
+            <!-- Point 38 -->
+            <h3>38. Role in Advertising</h3>
+            <p>
+                Advertising cookies are primarily used by advertisers and ad networks to deliver targeted advertisements to users. They track your browsing activity across various websites to build a profile of your interests, which is then used to show you ads that are more likely to be relevant to you. These cookies also help limit the number of times you see a particular ad and measure the effectiveness of advertising campaigns.
+                <br><br>
+                While CraftedAura prioritizes user privacy, we may use advertising cookies (with your consent where required) to promote our unique wood art and honey products to potential customers who have shown interest in similar items. These cookies help us reach the right audience more efficiently, ensuring that our marketing efforts are relevant and not overly intrusive. They allow us to measure the success of our campaigns and refine our advertising strategies to better serve our community.
+            </p>
+
+            <!-- Point 39 -->
+            <h3>39. Future of Cookies (e.g., Privacy Sandbox)</h3>
+            <p>
+                The landscape of web tracking is evolving rapidly, driven by increasing privacy concerns and new regulations. Major browsers are phasing out or severely limiting third-party cookies, leading to initiatives like Google's Privacy Sandbox. The Privacy Sandbox aims to create new technologies that protect user privacy while still enabling personalized advertising and measurement. These new APIs (e.g., Topics, FLEDGE, Attribution Reporting) are designed to facilitate interest-based advertising and conversion measurement without relying on individual cross-site tracking.
+                <br><br>
+                CraftedAura is closely monitoring these developments to ensure our website remains compliant and continues to offer a seamless experience while respecting user privacy. As third-party cookies become less prevalent, we will adapt our analytics and marketing strategies to embrace these new privacy-preserving technologies. Our commitment is to evolve with the web, ensuring that our digital presence remains effective for our business and respectful of your data rights, regardless of technological shifts.
+            </p>
+
+            <!-- Point 40 -->
+            <h3>40. Web Storage (localStorage, sessionStorage) vs. Cookies</h3>
+            <p>
+                Web storage APIs (localStorage and sessionStorage) provide alternative ways for websites to store data directly within the user's browser, similar to cookies but with key differences.
+                <ul>
+                    <li><strong>localStorage:</strong> Stores data with no expiration date, persisting even after the browser is closed. It has a larger storage capacity (typically 5-10MB).</li>
+                    <li><strong>sessionStorage:</strong> Stores data only for the duration of a single browser session; data is cleared when the browser tab or window is closed.</li>
+                    <li><strong>Cookies:</strong> Have a smaller storage limit (around 4KB), are sent with every HTTP request, and can have expiration dates.</li>
+                </ul>
+                <br>
+                While CraftedAura primarily uses HTTP cookies for session management and basic preferences due to their traditional role and specific attributes (like HttpOnly for security), we may also utilize localStorage or sessionStorage for certain client-side functionalities that don't require server interaction or have larger data storage needs. For example, we might use localStorage to remember a user's preference for a specific display mode (e.g., dark mode) or sessionStorage for temporary data related to a multi-step form, enhancing performance and user experience without relying on cookies for every piece of data.
+            </p>
+
+            <!-- End of 40 points -->
+
+            <h3>Contact Us</h3>
+            <p>
+                If you have any questions about our use of cookies or other technologies, please email us at <a href="mailto:info@craftedaura.com" style="color: #37474F; text-decoration: none;">info@craftedaura.com</a>.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section about">
+                    <h3>About CraftedAura</h3>
+                    <p>CraftedAura celebrates the artistry of wood carving, whittling, and handmade wooden creations with a refined, soulful touch. We offer custom art, workshops, and sustainable, beautiful products.</p>
+                </div>
+                <div class="footer-section links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html#creations">Shop</a></li>
+                        <li><a href="index.html#workshops">Workshops</a></li>
+                        <li><a href="index.html#story">Our Story</a></li>
+                        <li><a href="index.html#contact">Contact Us</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms & Conditions</a></li>
+                        <li><a href="cookies.html">Cookie Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section contact-info">
+                    <h3>Contact Us</h3>
+                    <p>Email: info@craftedaura.com</p>
+                    <p>Phone: +91 98765 43210</p>
+                    <p>
+                        Address: CraftedAura Studio<br>
+                        123 Woodcraft Lane<br>
+                        Artisanal District, Delhi<br>
+                        Delhi, 110001<br>
+                        India
+                    </p>
+                </div>
+                <div class="footer-section social">
+                    <h3>Follow Us</h3>
+                    <a href="#" target="_blank">Facebook</a>
+                    <a href="#" target="_blank">Instagram</a>
+                    <a href="#" target="_blank">Pinterest</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 CraftedAura. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cookie Consent Dialogue Box -->
+    <div id="cookieConsentBox">
+        <p>
+            We use cookies to improve your experience and analyze site traffic. By clicking "Accept All Cookies," you agree to our use of cookies. For more details, please see our <a href="cookies.html" style="color: #FFB74D; text-decoration: underline;">Cookie Policy</a>.
+        </p>
+        <div class="cookie-buttons">
+            <button onclick="acceptCookies()">Accept All Cookies</button>
+            <button class="decline" onclick="declineCookies()">Decline Non-Essential</button>
+        </div>
+    </div>
+
+    <script>
+        // Function to set a cookie
+        function setCookie(name, value, days) {
+            let expires = "";
+            if (days) {
+                let date = new Date();
+                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                expires = "; expires=" + date.toUTCString();
+            }
+            document.cookie = name + "=" + (value || "") + expires + "; path=/; SameSite=Lax";
+        }
+
+        // Function to get a cookie
+        function getCookie(name) {
+            let nameEQ = name + "=";
+            let ca = document.cookie.split(';');
+            for(let i=0;i < ca.length;i++) {
+                let c = ca[i];
+                while (c.charAt(0)==' ') c = c.substring(1,c.length);
+                if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+            }
+            return null;
+        }
+
+        // Function to accept cookies
+        function acceptCookies() {
+            setCookie('cookie_consent', 'accepted', 365); // Cookie lasts for 1 year
+            document.getElementById('cookieConsentBox').style.display = 'none';
+            console.log('Cookies accepted.');
+            // Here you would typically enable analytics or advertising scripts
+        }
+
+        // Function to decline cookies
+        function declineCookies() {
+            setCookie('cookie_consent', 'declined', 365); // Cookie lasts for 1 year
+            document.getElementById('cookieConsentBox').style.display = 'none';
+            console.log('Non-essential cookies declined.');
+            // Here you would typically disable analytics or advertising scripts
+        }
+
+        // Check cookie consent status on page load
+        window.onload = function() {
+            let consent = getCookie('cookie_consent');
+            if (consent === null) {
+                document.getElementById('cookieConsentBox').style.display = 'flex';
+            } else {
+                document.getElementById('cookieConsentBox').style.display = 'none';
+            }
+        };
+    </script>
+</body>
+</html>

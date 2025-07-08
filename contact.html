@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us — CraftedAura</title>
+    <style>
+        /* General Body Styles */
+        body {
+            font-family: 'Georgia', serif; /* Elegant, classic font */
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #EFEBE9; /* Antique Cream */
+            color: #37474F; /* Charcoal Slate */
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+
+        /* Header & Navigation */
+        header {
+            background-color: #5D4037; /* Deep Walnut Brown */
+            color: #EFEBE9; /* Antique Cream */
+            padding: 1rem 0;
+        }
+
+        header .logo h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            color: #FFB74D; /* Copper Gold for accent */
+            text-align: center; /* Center the logo for simplicity */
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap; /* Allow navigation to wrap on smaller screens */
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap; /* Allow nav items to wrap */
+            justify-content: center; /* Center nav items when wrapped */
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #EFEBE9; /* Antique Cream */
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #FFB74D; /* Copper Gold */
+        }
+
+        /* Main Content Sections */
+        .section {
+            padding: 60px 0;
+            border-bottom: 1px solid #D7CCC8; /* Lighter shade of cream */
+        }
+
+        .section:last-child {
+            border-bottom: none;
+        }
+
+        .section h2 {
+            text-align: center;
+            font-size: 2.8rem;
+            margin-bottom: 40px;
+            color: #5D4037; /* Deep Walnut Brown */
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .section h2::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 0;
+            width: 80px;
+            height: 4px;
+            background-color: #FFB74D; /* Copper Gold */
+            border-radius: 2px;
+        }
+
+        .section h3 {
+            color: #5D4037;
+            font-size: 1.8rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        .section p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        /* Contact Form Styles */
+        .contact-form {
+            background-color: #FFFFFF;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            max-width: 700px;
+            margin: 40px auto;
+        }
+
+        .contact-form label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #5D4037;
+        }
+
+        .contact-form input[type="text"],
+        .contact-form input[type="email"],
+        .contact-form textarea {
+            width: calc(100% - 20px); /* Account for padding */
+            padding: 12px 10px;
+            margin-bottom: 20px;
+            border: 1px solid #D7CCC8;
+            border-radius: 5px;
+            font-size: 1rem;
+            color: #37474F;
+            transition: border-color 0.3s ease;
+        }
+
+        .contact-form input[type="text"]:focus,
+        .contact-form input[type="email"]:focus,
+        .contact-form textarea:focus {
+            border-color: #4CAF50;
+            outline: none;
+        }
+
+        .contact-form textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .contact-form button {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-form button:hover {
+            background-color: #379636;
+        }
+
+        .contact-info-block {
+            text-align: center;
+            margin-top: 50px;
+            padding: 30px;
+            background-color: #FFFFFF;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .contact-info-block p {
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+            color: #37474F;
+        }
+
+        .contact-info-block strong {
+            color: #5D4037;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #37474F; /* Charcoal Slate */
+            color: #EFEBE9; /* Antique Cream */
+            padding: 40px 0;
+            font-size: 0.9rem;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .footer-section {
+            flex: 1;
+            min-width: 250px;
+            margin-bottom: 20px;
+        }
+
+        .footer-section h3 {
+            color: #FFB74D; /* Copper Gold */
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 8px;
+        }
+
+        .footer-section ul li a {
+            color: #EFEBE9; /* Antique Cream */
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section ul li a:hover {
+            color: #4CAF50; /* Forest Green */
+        }
+
+        .footer-section.social a {
+            display: inline-block;
+            color: #EFEBE9;
+            background-color: #5D4037; /* Deep Walnut Brown */
+            padding: 8px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-right: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .footer-section.social a:hover {
+            background-color: #4CAF50; /* Forest Green */
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(239, 235, 233, 0.2); /* Lighter border */
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+            }
+
+            nav ul {
+                margin-top: 20px;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .footer-section {
+                text-align: center;
+            }
+
+            .contact-form {
+                padding: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .section h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <h1>CraftedAura</h1>
+                </div>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                    <li><a href="terms.html">Terms</a></li>
+                    <li><a href="cookies.html">Cookies</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="contact-us" class="section">
+            <h2>Contact Us</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 40px;">
+                We'd love to hear from you! Whether you have a question about our handcrafted creations, bespoke carving services, whittling workshops, or our pure honey collection, please don't hesitate to reach out. Fill out the form below, or use our contact details to get in touch directly.
+            </p>
+
+            <div class="contact-form">
+                <h3>Send Us a Message</h3>
+                <form action="#" method="POST"> <!-- Action would typically be a backend script -->
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Your Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="subject">Subject:</label>
+                    <input type="text" id="subject" name="subject">
+
+                    <label for="message">Your Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+
+            <div class="contact-info-block">
+                <h3>Our Contact Details</h3>
+                <p><strong>Email:</strong> <a href="mailto:info@craftedaura.com" style="color: #37474F; text-decoration: none;">info@craftedaura.com</a></p>
+                <p><strong>Phone:</strong> <a href="tel:+919876543210" style="color: #37474F; text-decoration: none;">+91 98765 43210</a></p>
+                <p>
+                    <strong>Address:</strong><br>
+                    CraftedAura Studio<br>
+                    123 Woodcraft Lane<br>
+                    Artisanal District, Delhi<br>
+                    Delhi, 110001<br>
+                    India
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section about">
+                    <h3>About CraftedAura</h3>
+                    <p>CraftedAura celebrates the artistry of wood carving, whittling, and handmade wooden creations with a refined, soulful touch. We offer custom art, workshops, and sustainable, beautiful products.</p>
+                </div>
+                <div class="footer-section links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html#creations">Shop</a></li>
+                        <li><a href="index.html#workshops">Workshops</a></li>
+                        <li><a href="index.html#story">Our Story</a></li>
+                        <li><a href="index.html#contact">Contact Us</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms & Conditions</a></li>
+                        <li><a href="cookies.html">Cookie Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section contact-info">
+                    <h3>Contact Us</h3>
+                    <p>Email: info@craftedaura.com</p>
+                    <p>Phone: +91 98765 43210</p>
+                    <p>
+                        Address: CraftedAura Studio<br>
+                        123 Woodcraft Lane<br>
+                        Artisanal District, Delhi<br>
+                        Delhi, 110001<br>
+                        India
+                    </p>
+                </div>
+                <div class="footer-section social">
+                    <h3>Follow Us</h3>
+                    <a href="#" target="_blank">Facebook</a>
+                    <a href="#" target="_blank">Instagram</a>
+                    <a href="#" target="_blank">Pinterest</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 CraftedAura. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
